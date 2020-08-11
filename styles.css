@@ -17,5 +17,90 @@ header{
     padding-top: 50px;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 10vw;
+}
+
+.card-detail{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 50px;
+    background: #ffff;
+    border-radius: 20px;
+    height: 500px;
+    padding: 10px;
+}
+
+.card-detail .profile{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-detail .profile .image{
+    width: 100px;
+    border-radius: 360px;
+    margin-right: 10px;
+}
+
+.card-detail .profile .info-box .name{
+    font-weight: bold;
+    font-size: 25pt;
+}
+
+.card-detail .profile .info-box .position{
+    font-weight: 400;
+    font-size: 15pt;
+    color: #666;
+}
+
+.card-detail .bio{
+    flex: 2;
+    padding: 0px 10px;
+    font-size: 15pt;
+}
+
+.card-detail .contact{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-detail .contact button{
+    margin-top: 10px;
+    border: 0;
+    border-radius: 4px;
+    height: 48px;
+    font-size: 16px;
+    background:transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s;
+}
+
+.card-detail .contact button div{
+    margin-right: 5px;
+}
+
+.card-detail .contact button:hover{
+    background-color: rgb(197, 197, 197);
+}
+
+.members-list{
+    flex: 2;
+    margin-left: 50px;
+    width: 500px;
+    height: 500px; 
+}
 
   
