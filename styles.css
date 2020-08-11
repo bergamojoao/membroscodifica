@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+
+body{
+    background: linear-gradient(#01628B,#6590D0) fixed;
+    -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+    font-family: Roboto, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+
+  
