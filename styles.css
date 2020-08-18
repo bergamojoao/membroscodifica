@@ -93,14 +93,60 @@ header{
 }
 
 .card-detail .contact button:hover{
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(168, 212, 238);
 }
 
 .members-list{
     flex: 2;
     margin-left: 50px;
     width: 500px;
-    height: 500px; 
+    height: 500px;
+}
+
+.members-list ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.members-list ul li{
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.members-list ul li:hover{
+    background-color: rgb(168, 212, 238);
+}
+
+.members-list ul .selected{
+    list-style-position:inside;
+    border: 5px solid rgb(4, 79, 219);
+}
+
+.members-list ul li img{
+    width: 80px;
+    height: 80px;
+    border-radius: 360px;
+    margin-bottom: 10px;
+}
+
+.members-list ul li .name{
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.members-list ul li .position{
+    font-weight: 400;
+    font-size: 15pt;
+    color: #666;
+    align-self: center;
 }
 
   
