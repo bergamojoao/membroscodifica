@@ -162,12 +162,13 @@ header{
 .members-list .scroller .scroller-button {
     margin: 2px;
     border-radius: 50%;
-    height: 10px;
-    width: 10px;
+    height: 15px;
+    width: 15px;
     padding: 0px;
     border: none;
     background-color: #6999e0;
     transition: background 0.2s;
+    cursor: pointer;
 }
 
 .members-list .scroller .scroller-button:not(.selected):hover {
@@ -175,5 +176,5 @@ header{
 }
 
 .members-list .scroller .scroller-button.selected {
-    background-color: #81abeb;
+    background-color: #002c6d;
 }
