@@ -1,109 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
-    <link rel="shortcut icon" href="assets/favicon.ico">
-    <meta name="msapplication-TileColor" content="#01628B">
-    <meta name="msapplication-config" content="assets/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="./styles.css">
-
-    <title>Membros | Codifica Jr.</title>
-</head>
-<body>
-    <header>
-        <img src="assets/logo.svg" alt="Codifica Jr.">
-    </header>
-
-    <div class="container">
-        <div class="card-detail">
-            <!-- TODO: Card do membro selecionado -->
-            <div class="profile">
-                <div class="image-box">
-                    <img class="image" src="./assets/members/wallac.jpg" alt="Wallacy">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+        <link rel="manifest" href="assets/site.webmanifest">
+        <link rel="shortcut icon" href="assets/favicon.ico">
+        <meta name="msapplication-TileColor" content="#01628B">
+        <meta name="msapplication-config" content="assets/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Membros | Codifica Jr.</title>
+    </head>
+    <body>
+        <header>
+            <img src="assets/logo.svg" alt="Codifica Jr.">
+        </header>
+        <div class="container">
+            <div class="card-detail">
+                <!-- TODO: Card do membro selecionado -->
+                <div class="profile">
+                    <div class="image-box">
+                        <img class="image" src="./assets/members/wallac.jpg" alt="Wallacy">
+                    </div>
+                    <div class="info-box">
+                        <span class="name">Wallacy Sebastian</span><br>
+                        <span class="position">Diretor Presidente</span>
+                    </div>
                 </div>
-                <div class="info-box">
-                    <span class="name">Wallacy Sebastian</span><br>
-                    <span class="position">Diretor Presidente</span>
+                <div class="bio">
+                    <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</i>
+                </div>
+                <div class="contact">
+                    <button>
+                        <div>
+                            <img src="./assets/email.png" alt="Email">
+                        </div>
+                        <div>
+                            <i>wallacy1234@uel.br</i>
+                        </div>
+                    </button>
+                    <button>
+                        <div>
+                            <img src="./assets/linkedin.png" alt="Linkedin">
+                        </div>
+                        <div>
+                            <i>wallacy-sebastian</i>
+                        </div>
+                    </button>
+                    <button>
+                        <div>
+                            <img src="./assets/github.png" alt="github">
+                        </div>
+                        <div>
+                            <i>wallacy-sebastian</i>
+                        </div>
+                    </button>
                 </div>
             </div>
-
-            <div class="bio">
-                <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</i>
+            <div class="members-list">
+                <ul>
+                    <li class="selected">
+                        <img src="./assets/members/wallac.jpg" alt="Wallacy Sebastian" class="avatar">
+                        <span class="name">Wallacy Sebastian</span>
+                        <span class="position">Diretor Presidente</span>         
+                    </li>
+                    <li>
+                        <img src="./assets/members/pedrophs.jpg" alt="Pedro PHS" class="avatar">
+                        <span class="name">Pedro PHS</span>
+                        <span class="position">Diretor de Marketing</span>         
+                    </li>
+                    <li>
+                        <img src="./assets/members/Anonymous.png" alt="Anderson" class="avatar">
+                        <span class="name">Anderson</span>
+                        <span class="position">Diretor Financeiro</span>         
+                    </li>
+                    <li>
+                        <img src="./assets/members/lucca.jpg" alt="Lucca Motta" class="avatar">
+                        <span class="name">Lucca Motta</span>
+                        <span class="position">Membro</span>         
+                    </li>
+                    <li>
+                        <img src="./assets/members/gabriel.jpg" alt="Gabriel Henrique" class="avatar">
+                        <span class="name">Gabriel Henrique</span>
+                        <span class="position">Membro</span>         
+                    </li>
+                    <li>
+                        <img src="./assets/members/jao.jpg" alt="João Gabriel" class="avatar">
+                        <span class="name">João Gabriel</span>
+                        <span class="position">Membro</span>         
+                    </li>
+                </ul>
+                <div class="scroller-container">
+                    <div class="scroller">
+                        <div class="scroller-button selected">
+                        </div>
+                        <div class="scroller-button">
+                        </div>
+                        <div class="scroller-button">
+                        </div>
+                        <div class="scroller-button">
+                        </div>
+                        <div class="scroller-button">
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="contact">
-                <button>
-                    <div>
-                        <img src="./assets/email.png" alt="Email">
-                    </div>
-                    <div>
-                        <i>wallacy1234@uel.br</i>
-                    </div>
-                </button>
-                <button>
-                    <div>
-                        <img src="./assets/linkedin.png" alt="Linkedin">
-                    </div>
-                    <div>
-                        <i>wallacy-sebastian</i>
-                    </div>
-                </button>
-                <button>
-                    <div>
-                        <img src="./assets/github.png" alt="github">
-                    </div>
-                    <div>
-                        <i>wallacy-sebastian</i>
-                    </div>
-                </button>
-            </div>
-            
         </div>
-        <div class="members-list">
-           <ul>
-                <li class="selected">
-                    <img src="./assets/members/wallac.jpg" alt="Wallacy Sebastian" class="avatar">
-                    <span class="name">Wallacy Sebastian</span>
-                    <span class="position">Diretor Presidente</span>         
-                </li>
-                <li>
-                    <img src="./assets/members/pedrophs.jpg" alt="Pedro PHS" class="avatar">
-                    <span class="name">Pedro PHS</span>
-                    <span class="position">Diretor de Marketing</span>         
-                </li>
-                <li>
-                    <img src="./assets/members/Anonymous.png" alt="Anderson" class="avatar">
-                    <span class="name">Anderson</span>
-                    <span class="position">Diretor Financeiro</span>         
-                </li>
-                <li>
-                    <img src="./assets/members/lucca.jpg" alt="Lucca Motta" class="avatar">
-                    <span class="name">Lucca Motta</span>
-                    <span class="position">Membro</span>         
-                </li>
-               <li>
-                    <img src="./assets/members/gabriel.jpg" alt="Gabriel Henrique" class="avatar">
-                    <span class="name">Gabriel Henrique</span>
-                    <span class="position">Membro</span>         
-               </li>
-               <li>
-                    <img src="./assets/members/jao.jpg" alt="João Gabriel" class="avatar">
-                    <span class="name">João Gabriel</span>
-                    <span class="position">Membro</span>         
-               </li>
-           </ul>
-        </div>
-    </div>
-    
-
-</body>
+    </body>
 </html>
-

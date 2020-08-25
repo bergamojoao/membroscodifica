@@ -149,4 +149,29 @@ header{
     align-self: center;
 }
 
-  
+.members-list .scroller-container {
+    margin-left: 40px;
+}
+
+.members-list .scroller {
+    display: flex;
+    width: min-content;
+    margin: auto;
+}
+
+.members-list .scroller .scroller-button {
+    margin: 2px;
+    border-radius: 50%;
+    height: 10px !important;
+    width: 10px !important;
+    background-color: #6999e0;
+    transition: background 0.2s;
+}
+
+.members-list .scroller .scroller-button:not(.selected):hover {
+    background-color: #75a4eb;
+}
+
+.members-list .scroller .scroller-button.selected {
+    background-color: #81abeb;
+}
