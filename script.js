@@ -53,10 +53,105 @@ const members = [
         linkedin:'http://linkedin.com/',
         github:'https://github.com/wallacy',     
     },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
+    {
+        image:'assets/members/jao.jpg',
+        name:'João Gabriel',
+        cargo:'Membro',
+        bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        email:'joaogabriel@uel.br',
+        linkedin:'http://linkedin.com/',
+        github:'https://github.com/wallacy',     
+    },
 ];
 
 
-
+let membrosPagina = []
+for (let index = 0; index < members.length; index++) {
+    if(index==6) break
+    membrosPagina[index] = members[index]
+    
+}
 
 let list =document.getElementById("membros")
 let membrosHTML = []
@@ -65,7 +160,7 @@ let selected = 0;
 function selectMember(member) {
     membrosHTML[selected].removeAttribute("class");
     membrosHTML[member].setAttribute("class","selected")
-    memberDetail(members[member])
+    memberDetail(membrosPagina[member])
     selected=member
 }
 
@@ -88,7 +183,7 @@ function memberDetail(member) {
     document.getElementById("email-detail").appendChild(email)
 }
 
-members.map((member,i)=>{
+function renderPage(member,i){
     let li = document.createElement("li")
     li.addEventListener("click",()=>selectMember(i))
 
@@ -115,4 +210,54 @@ members.map((member,i)=>{
     li.appendChild(cargo)
     membrosHTML.push(li);
     list.appendChild(li)
-})
+}
+
+membrosPagina.map(renderPage)
+
+let currentPage = 0
+
+function nextPage(page){
+    let lastScroll = document.getElementById(`scroll-${currentPage}`)
+    lastScroll.setAttribute("class","scroller-button")
+    let newScroll = document.getElementById(`scroll-${page}`)
+    newScroll.setAttribute("class","scroller-button selected")
+    currentPage=page
+    let inicio = page*6
+    let fim = inicio+6
+    if(fim>members.length)
+        fim=members.length
+    let j=0
+    membrosPagina=[]
+    for(i=inicio;i<fim;i++){
+        membrosPagina[j]=members[i]
+        j++
+    }
+    membrosHTML=[]
+    while(list.firstChild){
+        list.removeChild(list.firstChild)
+    }
+    membrosPagina.map(renderPage)
+}
+
+
+// Adiciona scrollers de acordo com a quantidade de membros
+for (let index = 0; index < parseInt(members.length/6); index++) {
+    const element = document.getElementById("pages")
+    let scroll = document.createElement("button")
+    scroll.setAttribute("id",`scroll-${index}`)
+    scroll.setAttribute("class","scroller-button")
+    if(index===0){
+        scroll.setAttribute("class","scroller-button selected")
+    }    
+    scroll.setAttribute("onclick",`nextPage(${index})`)
+    element.appendChild(scroll)
+}
+
+if(members.length%6!=0){
+    const element = document.getElementById("pages")
+    let scroll = document.createElement("button")
+    scroll.setAttribute("class","scroller-button")
+    scroll.setAttribute("onclick",`nextPage(${parseInt(members.length/6)},this)`)
+    scroll.setAttribute("id",`scroll-${parseInt(members.length/6)}`)
+    element.appendChild(scroll)
+}
